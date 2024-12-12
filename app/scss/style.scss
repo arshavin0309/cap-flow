@@ -7,6 +7,7 @@
     --black: #111415;
     --white: #EFEFEF;
     --grey: #242424;
+    --backdrop: #00000057;
 }
 
 html,
@@ -372,7 +373,7 @@ section {
         position: relative;
         padding: 45px 30px;
         border-radius: 20px;
-        background: #00000057;
+        background: var(--backdrop);
         backdrop-filter: blur(15px);
         overflow: clip;
 
@@ -584,6 +585,24 @@ section {
             height: 14px;
             background: url(../images/arrow.svg) center / contain no-repeat;
         }
+    }
+}
+
+.trade {
+    h2 {
+        margin-bottom: 50px;
+    }
+
+    &__list {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__item {
+        padding: 60px 40px;
+        border-radius: 20px;
+        background: var(--backdrop);
     }
 }
 
