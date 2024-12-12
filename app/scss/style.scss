@@ -86,15 +86,15 @@ h3 {
 .upButton {
     z-index: 1000;
     position: fixed;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     bottom: 20px;
     right: 15px;
     cursor: pointer;
     transition: all .2s ease-in-out;
     transform: scale(0);
     pointer-events: none;
-    background: var(--yellow) url(../images/up-btn.svg) center / 20px no-repeat;
+    background: var(--accent) url(../images/up-btn.svg) center / 20px no-repeat;
     border-radius: 50%;
 
     &.show {
@@ -279,18 +279,40 @@ section {
         }
     }
 
-    &__links {
+    &__icons {
         display: grid;
         column-gap: 25px;
         row-gap: 20px;
         grid-template-columns: repeat(3, 50px);
         grid-template-rows: 50px 50px;
 
-        a {
-            display: block;
+        div {
             width: 50px;
             height: 50px;
-            background: var(--accent);
+
+            &:nth-child(1) {
+                background: url(../images/footer-icon-1.svg) center / contain no-repeat;
+            }
+
+            &:nth-child(2) {
+                background: url(../images/footer-icon-2.svg) center / contain no-repeat;
+            }
+
+            &:nth-child(3) {
+                background: url(../images/footer-icon-3.svg) center / contain no-repeat;
+            }
+
+            &:nth-child(4) {
+                background: url(../images/footer-icon-4.svg) center / contain no-repeat;
+            }
+
+            &:nth-child(5) {
+                background: url(../images/footer-icon-5.svg) center / contain no-repeat;
+            }
+
+            &:nth-child(6) {
+                background: url(../images/footer-icon-6.svg) center / contain no-repeat;
+            }
         }
     }
 
