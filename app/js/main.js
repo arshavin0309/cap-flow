@@ -31,6 +31,8 @@ if (document.location.pathname === '/contacts.html') { document.title = 'Кон�
 
 $(window).on('scroll', trackScroll);
 $('.upButton').on('click', backToTop);
+$('.header__logo').on('click', backToTop);
+$('.footer__logo').on('click', backToTop);
 
 function trackScroll() {
     let scrolled = window.pageYOffset;
@@ -214,6 +216,8 @@ let swiper3 = new Swiper(".swiper3", {
     },
 });
 
+// аккордеон (начало)
+
 $(document).ready(function () {
     $('.faq__list > li > .answer').hide();
 
@@ -229,3 +233,24 @@ $(document).ready(function () {
     });
 
 });
+
+// аккордеон (конец)
+
+// плавная прокрутка до якоря (начало)
+
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault()
+
+        const blockID = anchor.getAttribute('href').substr(1)
+
+        document.getElementById(blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+    })
+}
+
+// плавная прокрутка до якоря (конец)

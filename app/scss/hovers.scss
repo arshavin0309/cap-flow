@@ -1,3 +1,86 @@
 @media (min-width: 1024px) {
-    
+    .header {
+        .menu {
+            &>.menu-item {
+                &>a {
+                    transition: var(--transition);
+                }
+
+                &:hover {
+                    &>a {
+                        color: var(--accent);
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        .menu {
+            &>.menu-item {
+                &>a {
+                    transition: var(--transition);
+                }
+
+                &:hover {
+                    &>a {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+
+        &__docs {
+            a {
+                transition: var(--transition);
+
+                &:hover {
+                    font-weight: 700;
+
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    .btn-transparent {
+        transition: var(--transition);
+
+        &:hover {
+            color: var(--black);
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+    }
+
+    .btn {
+        transition: var(--transition);
+
+        &:hover {
+            background: var(--white);
+            border-color: var(--white);
+        }
+    }
+
+    .how {
+        &__btn {
+            &::after {
+                transition: var(--transition);
+            }
+
+            &:hover {
+                &::after {
+                    background-image: url(../images/arrow-2.svg);
+                }
+            }
+        }
+    }
+
+    .upButton {
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
 }

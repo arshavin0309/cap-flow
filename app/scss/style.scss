@@ -17,6 +17,10 @@ body {
     overflow-x: clip;
 }
 
+body {
+    padding-top: 135px;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -137,6 +141,14 @@ h3 {
 }
 
 .header {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 135px;
+    background: var(--grey);
+
     .container {
         display: flex;
         align-items: center;
@@ -149,6 +161,7 @@ h3 {
         width: 108px;
         height: 55px;
         background: url(../images/header-logo.svg) center / contain no-repeat;
+        cursor: pointer;
     }
 
     &__nav {
@@ -235,6 +248,7 @@ section {
         height: 65px;
         margin-bottom: 30px;
         background: url(../images/footer-logo.svg) center / contain no-repeat;
+        cursor: pointer;
     }
 
     &__contacts {
@@ -274,9 +288,21 @@ section {
         gap: 20px;
 
         a {
-            display: block;
+            display: grid;
+            grid-template-columns: 24px 1fr;
+            gap: 10px;
+            align-items: center;
             color: var(--white);
             text-decoration: none;
+
+            &::before {
+                content: '';
+                width: 24px;
+                height: 20px;
+                background: url(../images/footer-doc.svg) center / contain no-repeat;
+                opacity: 0.6;
+                transition: var(--transition);
+            }
         }
     }
 
@@ -375,7 +401,18 @@ section {
 }
 
 .why {
-    background: url(../images/why-line.svg) center bottom 120px / 100% calc(100% - 120px) no-repeat;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../images/why-line.svg) center bottom 120px / 100% calc(100% - 120px) no-repeat;
+        animation: scale3d 30s ease-in-out infinite;
+    }
 
     h2 {
         margin-bottom: 20px;
@@ -946,6 +983,8 @@ section {
         font-size: 22px;
         line-height: 27.5px;
         color: var(--white);
+        cursor: pointer;
+        transition: var(--transition);
 
         &-thumb-active {
             color: var(--black);
@@ -970,9 +1009,21 @@ section {
 }
 
 .faq {
-    background: url(../images/faq-line.svg) center top 65px / 100% calc(100% - 75px - 65px) no-repeat;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../images/faq-line.svg) center top 65px / 100% calc(100% - 75px - 65px) no-repeat;
+        animation: scale3d 30s ease-in-out infinite;
+    }
 
     h2 {
+        position: relative;
         margin-bottom: 60px;
     }
 
@@ -987,6 +1038,7 @@ section {
             background: var(--backdrop);
             border-radius: 50px;
             backdrop-filter: blur(15px);
+            cursor: pointer;
 
             &.active {
                 h3 {
@@ -1109,7 +1161,20 @@ section {
 }
 
 .contacts {
-    background: url(../images/contacts-line.svg) var(--black) right top / 50% 70% no-repeat;
+    position: relative;
+    background:  var(--black);
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../images/contacts-line.svg) right top 135px / 50% calc(70% - 135px) no-repeat;
+        
+        animation: animationLine2 30s ease-in-out infinite;
+    }
 
     .container {
         display: grid;
@@ -1183,12 +1248,28 @@ section {
 }
 
 .form {
+    z-index: 1;
+    position: relative;
     display: grid;
     gap: 30px;
     padding: 95px 75px;
     border-radius: 20px;
     background: #75757533;
     backdrop-filter: blur(15px);
+    overflow: clip;
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 550px;
+        height: 260px;
+        right: -15px;
+        top: -160px;
+        border-radius: 50%;
+        background: var(--accent);
+        filter: blur(100px);
+        opacity: 0.5;
+    }
 
     input {
         width: 100%;
@@ -1254,6 +1335,107 @@ section {
         display: flex;
         align-items: center;
         gap: 13px;
+    }
+}
+
+.banner {
+    margin-top: -120px;
+    margin-bottom: -120px;
+    overflow: clip;
+
+    h2 {
+        margin-bottom: 40px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 650px 670px;
+        gap: 20px;
+        align-items: center;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    &__btn {
+        max-width: 370px;
+        height: 58px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 7px 40px;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 28px;
+            height: 14px;
+            background: url(../images/arrow.svg) center / contain no-repeat;
+        }
+    }
+
+    &__picture {
+        position: relative;
+        margin-bottom: -60px;
+        height: calc(100% + 60px);
+
+        img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            bottom: -160px;
+            left: 0;
+            width: 100%;
+            height: 600px;
+            border-radius: 50%;
+            background: var(--accent);
+            filter: blur(100px);
+            opacity: 0.5;
+        }
+    }
+}
+
+#trade {
+    &::before {
+        content: '';
+        display: block;
+        margin-top: -135px;
+        padding-top: 135px;
+        visibility: hidden;
+    }
+}
+
+#platform {
+    &::before {
+        content: '';
+        display: block;
+        margin-top: -135px;
+        padding-top: 135px;
+        visibility: hidden;
+    }
+}
+
+#analytics {
+    &::before {
+        content: '';
+        display: block;
+        margin-top: -135px;
+        padding-top: 135px;
+        visibility: hidden;
+    }
+}
+
+#contacts {
+    &::before {
+        content: '';
+        display: block;
+        margin-top: -135px;
+        padding-top: 135px;
+        background: var(--grey);
     }
 }
 
