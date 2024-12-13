@@ -201,3 +201,31 @@ let swiper2 = new Swiper(".swiper2", {
         swiper: swiper1,
     },
 });
+
+let swiper3 = new Swiper(".swiper3", {
+    slidesPerView: 1,
+    centeredSlides: true,
+    spaceBetween: 45,
+    grabCursor: true,
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
+
+$(document).ready(function () {
+    $('.faq__list > li > .answer').hide();
+
+    $('.faq__list > li').click(function () {
+        if ($(this).hasClass("active")) {
+            $(this).removeClass("active").find(".answer").slideUp();
+        } else {
+            $(".faq__list > li.active .answer").slideUp();
+            $(".faq__list > li.active").removeClass("active");
+            $(this).addClass("active").find(".answer").slideDown();
+        }
+        return false;
+    });
+
+});
