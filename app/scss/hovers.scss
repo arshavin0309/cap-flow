@@ -80,6 +80,7 @@
 
     .upButton {
         &:hover {
+            transition: var(--transition);
             transform: scale(1.2);
         }
     }
