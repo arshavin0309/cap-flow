@@ -188,3 +188,16 @@ tableShow.on('click', showTr);
 tableHide.on('click', hideTr);
 
 // табы для таблиц (конец)
+
+let swiper1 = new Swiper(".swiper1", {
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+
+let swiper2 = new Swiper(".swiper2", {
+    spaceBetween: 10,
+    thumbs: {
+        swiper: swiper1,
+    },
+});

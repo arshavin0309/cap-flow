@@ -184,6 +184,43 @@
             </div>
         </div>
     </section>
+
+    <section class="analytics">
+        <div class="container">
+            <h2>Analytics</h2>
+            <p class="text">Stay ahead with our analysis tools, featuring three key widgets for real-time market updates, trend predictions, and trading signals.</p>
+
+            <div class="swiper swiper1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">Market watch</div>
+                    <div class="swiper-slide">Economic calendar</div>
+                    <div class="swiper-slide">Market leaders</div>
+                </div>
+            </div>
+
+            <div class="swiper swiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="widget-box">
+                            <script src="https://api.marketcheese.com/widgets/markets/widget.js" data-config='{"language":"en","orientation":"auto","defaultPeriod":"week","adaptive":true,"groups":[{"name":"Металлы","symbols":"97,98,99,100,104"},{"name":"Энергоносители","symbols":"127,128,129,277"},{"name":"Форекс","symbols":"42,48,57,68,87"},{"name":"Акции США","symbols":"12,14,18,201,225"}]}'></script>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="widget-box">
+                            <script src="https://api.marketcheese.com/widgets/calendar/widget.js" data-config='{"filters":{"countries":"1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,81,186,211","segments":"4,14,16"},"language":"en","timezone":"current","upload":"manual","rowCount":5}'></script>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="widget-box">
+                            <script src="https://api.marketcheese.com/widgets/leaders/widget.js" data-config='{"filters":{"segments":"14,4,16,8,5,7,15"},"language":"en"}'></script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
 <!--=include footer.html -->
