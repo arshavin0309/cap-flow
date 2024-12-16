@@ -13,12 +13,6 @@
                 }
             }
         }
-
-        &__logo {
-            &:hover {
-                filter: brightness(0) saturate(100%) invert(65%) sepia(56%) saturate(695%) hue-rotate(173deg) brightness(101%) contrast(105%);
-            }
-        }
     }
 
     .contacts {
@@ -36,12 +30,6 @@
     }
 
     .footer {
-        &__logo {
-            &:hover {
-                filter: brightness(0) saturate(100%) invert(65%) sepia(56%) saturate(695%) hue-rotate(173deg) brightness(101%) contrast(105%);
-            }
-        }
-
         &__tel {
             &:hover {
                 color: var(--accent);
@@ -142,7 +130,6 @@
         &__item {
             &:hover {
                 background: #75757533;
-                transform: scale(1.02);
             }
         }
     }
