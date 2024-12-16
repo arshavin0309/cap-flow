@@ -159,6 +159,15 @@ h3 {
     height: 135px;
     background: var(--grey);
 
+    &__burger {
+        display: none;
+        width: 24px;
+        height: 16px;
+        background: url(../images/header-burger.svg) center / contain no-repeat;
+        border: none;
+        cursor: pointer;
+    }
+
     .container {
         display: flex;
         align-items: center;
