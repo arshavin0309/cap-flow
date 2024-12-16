@@ -360,8 +360,13 @@ section {
         margin-bottom: 20px;
     }
 
-    .btn {
+    &__btn {
         margin-top: 40px;
+        min-width: 240px;
+        height: 55px;
+        padding: 12px 30px;
+        text-align: left;
+        background: var(--accent) url(../images/play-accent.svg) right 5px center / 45px 45px no-repeat;
     }
 
     .container {

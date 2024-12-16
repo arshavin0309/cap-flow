@@ -74,6 +74,14 @@
         }
     }
 
+    .hero {
+        &__btn {
+            &:hover {
+                background: var(--white) url(../images/play-white.svg) right 5px center / 45px 45px no-repeat;
+            }
+        }
+    }
+
     .form {
         input {
             &[type="submit"] {
