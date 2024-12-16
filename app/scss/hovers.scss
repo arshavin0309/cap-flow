@@ -21,6 +21,20 @@
         }
     }
 
+    .contacts {
+        &__tel {
+            &:hover {
+                color: var(--accent);
+            }
+        }
+
+        &__mail {
+            &:hover {
+                color: var(--accent);
+            }
+        }
+    }
+
     .footer {
         &__logo {
             &:hover {

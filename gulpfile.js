@@ -19,6 +19,11 @@ function resources() {
         .pipe(dest('dist/upload'))
 }
 
+function fonts() {
+    return src('app/fonts/**/*')
+        .pipe(dest('dist/fonts'))
+}
+
 function pages() {
     return src('app/pages/*.html')
         .pipe(include({
@@ -123,7 +128,8 @@ function building() {
         // 'app/images/sprite.svg',
         'app/js/main.min.js',
         'app/**/*.html',
-        'app/upload/**/*'
+        'app/upload/**/*',
+        'app/fonts/**/*',
     ], { base: 'app' })
         .pipe(dest('dist'))
 }
