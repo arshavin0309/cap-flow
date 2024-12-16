@@ -673,6 +673,14 @@ section {
         margin-bottom: 50px;
     }
 
+    &__top {
+        position: relative;
+    }
+
+    &__bottom {
+        position: relative;
+    }
+
     &__list {
         display: grid;
         gap: 10px;
