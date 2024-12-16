@@ -52,6 +52,16 @@
             color: var(--black);
             background: var(--accent);
             border-color: var(--accent);
+
+            span {
+                &::before {
+                    filter: brightness(0) saturate(100%) invert(4%) sepia(2%) saturate(5038%) hue-rotate(149deg) brightness(90%) contrast(91%);
+                }
+            }
+
+            &::after {
+                filter: brightness(0) saturate(100%) invert(4%) sepia(2%) saturate(5038%) hue-rotate(149deg) brightness(90%) contrast(91%);
+            }
         }
     }
 
@@ -64,15 +74,12 @@
         }
     }
 
-    .how {
-        &__btn {
-            &::after {
-                transition: var(--transition);
-            }
-
-            &:hover {
-                &::after {
-                    background-image: url(../images/arrow-2.svg);
+    .form {
+        input {
+            &[type="submit"] {
+                &:hover {
+                    background: var(--white) url(../images/play-white.svg) right 5px center / 45px 45px no-repeat;
+                    border-color: var(--white);
                 }
             }
         }
@@ -82,6 +89,23 @@
         &:hover {
             transition: var(--transition);
             transform: scale(1.2);
+        }
+    }
+
+    .why {
+        &__item {
+            &:hover {
+                background: #75757533;
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    .trade {
+        &__item {
+            &:hover {
+                transform: scale(1.01);
+            }
         }
     }
 }

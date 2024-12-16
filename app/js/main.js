@@ -206,13 +206,19 @@ let swiper2 = new Swiper(".swiper2", {
 
 let swiper3 = new Swiper(".swiper3", {
     slidesPerView: 1,
+    slidesPerView: 3,
     centeredSlides: true,
-    spaceBetween: 45,
+    spaceBetween: 30,
     grabCursor: true,
     loop: true,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
+    },
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
 });
 
