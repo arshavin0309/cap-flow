@@ -158,4 +158,56 @@
             min-height: 480px;
         }
     }
+
+    .swiper3 {
+        .swiper-slide {
+            height: auto;
+
+            p {
+                height: 100%;
+                color: var(--white);
+            }
+        }
+
+        .swiper-buttons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            position: initial;
+            width: 27px;
+            height: 27px;
+            flex: 0 0 auto;
+        }
+
+        .swiper-button-prev {
+            background: url(../images/swiper-prev.svg) center / contain no-repeat;
+        }
+
+        .swiper-button-next {
+            background: url(../images/swiper-next.svg) center / contain no-repeat;
+        }
+
+        .swiper-pagination {
+            display: block;
+            position: initial;
+        }
+
+        .swiper-pagination-bullet {
+            width: 9px;
+            height: 9px;
+            opacity: 1;
+            background: #EFEFEF66;
+            margin: 0 3px !important;
+
+            &-active {
+                background: var(--accent);
+            }
+        }
+    }
 }

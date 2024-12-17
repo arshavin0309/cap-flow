@@ -1246,6 +1246,10 @@ img {
     padding-right: 30px;
     padding-top: 20px;
 
+    .swiper-pagination {
+        display: none;
+    }
+
     .swiper-button-prev {
         top: 120px;
         left: 0;
