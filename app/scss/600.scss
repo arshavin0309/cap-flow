@@ -22,5 +22,47 @@
         &__list {
             display: none;
         }
+
+        &__item {
+            &:nth-child(1) {
+                padding: 40px 20px 290px;
+                align-items: center;
+                text-align: center;
+            }
+
+            &:nth-child(2) {
+                padding: 40px 20px 290px;
+                align-items: center;
+                text-align: center;
+            }
+
+            &:nth-child(3) {
+                padding: 40px 20px 290px;
+                align-items: center;
+                text-align: center;
+            }
+
+            &:nth-child(4) {
+                padding: 40px 20px 290px;
+            }
+        }
+
+        &__btns {
+            width: 100;
+        }
+
+        &__btn {
+            min-width: 100%;
+            width: 100%;
+        }
+
+        .swiper5 {
+            display: block;
+            margin-bottom: 30px;
+        }
+
+        .swiper6 {
+            display: block;
+        }
     }
 }
