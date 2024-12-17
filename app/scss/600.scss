@@ -1,3 +1,13 @@
 @media (max-width: 600px) {
-    
+    .hero {
+        .container {
+            grid-template-columns: 1fr;
+        }
+
+        &__picture {
+            max-width: 400px;
+            margin: auto;
+            gap: 40px;
+        }
+    }
 }

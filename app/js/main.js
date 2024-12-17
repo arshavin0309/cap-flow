@@ -205,7 +205,6 @@ let swiper2 = new Swiper(".swiper2", {
 });
 
 let swiper3 = new Swiper(".swiper3", {
-    slidesPerView: 1,
     slidesPerView: 3,
     centeredSlides: true,
     spaceBetween: 30,
@@ -219,6 +218,26 @@ let swiper3 = new Swiper(".swiper3", {
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
+    },
+});
+
+let swiper4 = new Swiper('.swiper4', {
+    spaceBetween: 20,
+
+    breakpoints: {
+        500: {
+            slidesPerView: 1.5,
+        },
+        768: {
+            slidesPerView: 2.5,
+        },
+        950: {
+            slidesPerView: 3,
+        },
+    },
+
+    pagination: {
+        el: '.swiper-pagination',
     },
 });
 

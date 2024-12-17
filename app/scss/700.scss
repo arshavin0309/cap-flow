@@ -1,3 +1,23 @@
 @media (max-width: 700px) {
-    
+    .why {
+        &__list {
+            .why__item {
+                &:nth-child(1) {
+                    padding-right: 40%;
+
+                    &:after {
+                        width: 40%;
+                    }
+                }
+
+                &:nth-child(2) {
+                    padding-right: 40%;
+
+                    &::after {
+                        width: calc(40% - 40px);
+                    }
+                }
+            }
+        }
+    }
 }
