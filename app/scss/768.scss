@@ -17,6 +17,10 @@
     }
 
     .platform {
+        h2 {
+            margin-bottom: 40px;
+        }
+
         &__item {
             &:nth-child(1) {
                 padding: 40px 45% 40px 20px;
@@ -33,6 +37,48 @@
 
         &__btn {
             padding: 8px 20px;
+        }
+    }
+
+    .faq {
+        h2 {
+            margin-bottom: 40px;
+        }
+
+        h3 {
+            gap: 10px;
+            align-items: start;
+            font-size: 18px;
+
+            span {
+                grid-template-columns: 23px 1fr;
+                gap: 15px;
+                align-items: start;
+                font-size: 18px;
+
+                &::before {
+                    width: 23px;
+                    height: 23px;
+                }
+            }
+
+            &::after {
+                width: 20px;
+                height: 9px;
+                flex: 0 0 auto;
+                transform: translateY(6px);
+            }
+        }
+
+        &__list {
+            li {
+                padding: 20px;
+                border-radius: 30px;
+            }
+
+            .answer {
+                margin-top: 10px;
+            }
         }
     }
 }

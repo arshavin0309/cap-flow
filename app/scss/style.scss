@@ -111,6 +111,7 @@ h3 {
     pointer-events: none;
     background: var(--accent) url(../images/up-btn.svg) center / 20px no-repeat;
     border-radius: 50%;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.2);
 
     &.show {
         transition: all 1s ease-in-out;
@@ -1133,8 +1134,8 @@ img {
 
     .swiper-slide {
         padding: 10px;
-        font-size: 22px;
-        line-height: 27.5px;
+        font-size: clamp(16px, 3vw, 22px);
+        line-height: 125%;
         color: var(--white);
         cursor: pointer;
         transition: var(--transition);
@@ -1289,10 +1290,6 @@ img {
         background: var(--black);
 
         p {
-            //display: -webkit-box;
-            //-webkit-box-orient: vertical;
-            //-webkit-line-clamp: 2;
-            //overflow: hidden;
             transition: var(--transition);
             height: 45px;
             overflow: hidden;
@@ -1349,6 +1346,7 @@ img {
 
     &__estimation {
         margin-bottom: 5px;
+        white-space: nowrap;
     }
 
     &__name {

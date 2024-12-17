@@ -205,7 +205,6 @@ let swiper2 = new Swiper(".swiper2", {
 });
 
 let swiper3 = new Swiper(".swiper3", {
-    slidesPerView: 3,
     centeredSlides: true,
     spaceBetween: 30,
     grabCursor: true,
@@ -213,6 +212,21 @@ let swiper3 = new Swiper(".swiper3", {
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
+    },
+
+    breakpoints: {
+        550: {
+            slidesPerView: 1.1,
+        },
+        700: {
+            slidesPerView: 1.5,
+        },
+        950: {
+            slidesPerView: 2,
+        },
+        1300: {
+            slidesPerView: 3,
+        },
     },
 
     navigation: {

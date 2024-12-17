@@ -20,4 +20,22 @@
             }
         }
     }
+
+    .swiper1 {
+        max-width: 360px;
+        margin-bottom: 30px;
+
+        .swiper-wrapper {
+            border-radius: 30px;
+        }
+
+        .swiper-slide {
+            font-size: 16px;
+            white-space: pre-wrap;
+
+            &-thumb-active {
+                border-radius: 26px;
+            }
+        }
+    }
 }
