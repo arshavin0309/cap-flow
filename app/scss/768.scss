@@ -15,4 +15,20 @@
             margin-top: 40px;
         }
     }
+
+    .platform {
+        &__item {
+            &:nth-child(1) {
+                padding: 40px 45% 40px 20px;
+            }
+
+            &:nth-child(2) {
+                padding: 40px 45% 40px 20px;
+            }
+
+            &:nth-child(3) {
+                padding: 40px 45% 40px 20px;
+            }
+        }
+    }
 }

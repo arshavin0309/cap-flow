@@ -169,6 +169,104 @@
         }
     }
 
+    .platform {
+        &__list {
+            grid-template-columns: 1fr;
+        }
+
+        &__item {
+            p {
+                max-width: 100%;
+            }
+
+            &:nth-child(1) {
+                padding: 50px 45% 50px 70px;
+                align-items: start;
+                text-align: left;
+
+                &::before {
+                    width: 40%;
+                    height: calc(100% - 30px);
+                    top: 30px;
+                    bottom: 0;
+                    left: 60%;
+                    right: 0;
+                    transform: none;
+                }
+
+                &::after {
+                    height: calc(100% - 30px);
+                    width: 40%;
+                    top: 30px;
+                    bottom: 0;
+                    left: auto;
+                    right: 0;
+                    background-position: right bottom;
+                }
+            }
+
+            &:nth-child(2) {
+                padding: 50px 45% 50px 70px;
+                align-items: start;
+                text-align: left;
+
+                &::before {
+                    width: 40%;
+                    height: calc(100% - 30px);
+                    top: 30px;
+                    bottom: 0;
+                    left: 60%;
+                    right: 0;
+                    transform: none;
+                }
+
+                &::after {
+                    height: calc(100% - 30px);
+                    width: 40%;
+                    top: 30px;
+                    bottom: 0;
+                    left: auto;
+                    right: 0;
+                    background-position: center bottom;
+                    transform: none;
+                }
+            }
+
+            &:nth-child(3) {
+                grid-column: initial;
+                min-height: initial;
+                padding: 50px 45% 50px 70px;
+                align-items: start;
+                text-align: left;
+
+                &::before {
+                    width: 40%;
+                    height: 100%;
+                    top: 0;
+                    bottom: 0;
+                    left: 60%;
+                    right: 0;
+                    transform: none;
+                }
+
+                &::after {
+                    height: 100%;
+                    width: 40%;
+                    top: 0;
+                    bottom: 0;
+                    left: auto;
+                    right: 0;
+                    background-position: center;
+                    transform: none;
+                }
+            }
+        }
+
+        &__btn {
+            min-width: 240px;
+        }
+    }
+
     #trade {
         &::before {
             margin-top: -76px;

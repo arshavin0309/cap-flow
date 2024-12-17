@@ -850,6 +850,10 @@ img {
         margin-bottom: 60px;
     }
 
+    h3 {
+        position: relative;
+    }
+
     &__list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -869,6 +873,7 @@ img {
         overflow: clip;
 
         p {
+            position: relative;
             max-width: 370px;
         }
 
@@ -971,6 +976,7 @@ img {
     }
 
     &__btns {
+        position: relative;
         display: grid;
         gap: 15px;
         margin-top: 20px;
@@ -980,6 +986,7 @@ img {
         min-width: 345px;
         display: flex;
         align-items: center;
+        gap: 20px;
         justify-content: space-between;
         padding: 17px 20px;
 
@@ -1071,6 +1078,7 @@ img {
         color: var(--white);
         cursor: pointer;
         transition: var(--transition);
+        white-space: nowrap;
 
         &-thumb-active {
             color: var(--black);
