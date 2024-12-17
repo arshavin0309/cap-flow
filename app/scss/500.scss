@@ -159,9 +159,62 @@
         }
     }
 
+    .feedback {
+        &__picture {
+            width: 85px;
+            height: 103px;
+            border-radius: 10px;
+            margin-top: -20px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__content {
+            grid-template-columns: 85px 1fr;
+            gap: 15px;
+            margin-top: -20px;
+        }
+
+        &__box {
+            padding-top: 20px;
+        }
+
+        &__name {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        &__stars {
+            grid-template-columns: 10px 1fr;
+            gap: 4px;
+            padding: 4px 7px;
+            margin-bottom: 10px;
+            font-size: 10px;
+            line-height: 13px;
+
+            &:before {
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+        &__estimation {
+            margin-bottom: 0;
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+
     .swiper3 {
+        padding-left: 0;
+        padding-right: 0;
+
         .swiper-slide {
             height: auto;
+            padding: 20px 15px 30px;
 
             p {
                 height: 100%;
