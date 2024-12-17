@@ -210,7 +210,7 @@ h3 {
 .btn {
     display: inline-block;
     padding: 13px 58px;
-    font-size: 25px;
+    font-size: clamp(18px, 4vw, 25px);
     font-weight: 400;
     line-height: 110%;
     border: 1px solid var(--accent);
@@ -720,10 +720,12 @@ img {
     }
 
     &__top {
+        z-index: 1;
         position: relative;
     }
 
     &__bottom {
+        z-index: 1;
         position: relative;
     }
 
@@ -768,12 +770,14 @@ img {
             background: #57C7FF33;
 
             &::before {
+                z-index: 1;
                 position: absolute;
                 content: 'Popular';
                 top: 10px;
                 right: 10px;
                 padding: 5px 25px;
                 font-family: 'benzin';
+                font-size: clamp(9px, 2vw, 14px);
                 color: var(--black);
                 background: var(--accent);
                 border-radius: 10px;
@@ -781,7 +785,7 @@ img {
         }
 
         &:nth-child(1) {
-            &::before {
+            &::after {
                 position: absolute;
                 content: '';
                 top: 180px;
@@ -796,7 +800,7 @@ img {
         }
 
         &:nth-child(3) {
-            &::before {
+            &::after {
                 position: absolute;
                 content: '';
                 top: -50px;
@@ -825,10 +829,12 @@ img {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 20px;
         width: 100%;
         height: 60px;
         margin-top: 50px;
         padding: 7px 40px;
+        white-space: nowrap;
 
         &::after {
             content: '';

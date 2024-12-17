@@ -99,4 +99,63 @@
             height: auto;
         }
     }
+
+    .how {
+        h2 {
+            text-align: left;
+        }
+
+        &__list {
+            grid-template-columns: 20px 1fr;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        &__number {
+            width: 20px;
+            height: 20px;
+            font-size: 11px;
+            line-height: 12px;
+
+            &--1 {
+                &::after {
+                    height: 370px;
+                }
+            }
+
+            &--2 {
+                &::after {
+                    height: 370px;
+                }
+            }
+
+            &--3 {
+                &::after {
+                    height: 370px;
+                }
+            }
+        }
+
+        &__content {
+            gap: 15px;
+        }
+
+        &__image {
+            border-radius: 20px;
+        }
+
+        &__btn {
+            height: auto;
+            border-radius: 60px;
+            padding: 8px 20px;
+        }
+    }
+
+    .trade {
+        &__item {
+            display: flex;
+            gap: 30px;
+            min-height: 480px;
+        }
+    }
 }

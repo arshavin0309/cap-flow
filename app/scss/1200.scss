@@ -57,6 +57,10 @@
     }
 
     .how {
+        h2 {
+            text-align: center;
+        }
+
         &__btn {
             width: 100%;
             max-width: 800px;
@@ -78,6 +82,7 @@
             height: auto;
             margin-bottom: 30px;
             object-fit: contain;
+            border-radius: 40px;
 
             &--1 {
                 grid-row: 2;
@@ -101,7 +106,7 @@
                 grid-column: 1/2;
 
                 &::after {
-                    height: 430px;
+                    height: 500px;
                 }
             }
 
@@ -110,7 +115,7 @@
                 grid-column: 1/2;
 
                 &::after {
-                    height: 430px;
+                    height: 500px;
                 }
             }
 
@@ -119,7 +124,7 @@
                 grid-column: 1/2;
 
                 &::after {
-                    height: 430px;
+                    height: 500px;
                 }
             }
         }
@@ -139,6 +144,56 @@
                 grid-row: 5;
                 grid-column: 2;
             }
+        }
+    }
+
+    .trade {
+        &__list {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        &__item {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            justify-items: start;
+            gap: 70px;
+            height: auto;
+        }
+
+        &__btn {
+            width: auto;
+            min-width: 280px;
+            padding: 8px 20px;
+            height: auto;
+        }
+    }
+
+    #trade {
+        &::before {
+            margin-top: -76px;
+            padding-top: 76px;
+        }
+    }
+
+    #platform {
+        &::before {
+            margin-top: -76px;
+            padding-top: 76px;
+        }
+    }
+
+    #analytics {
+        &::before {
+            margin-top: -76px;
+            padding-top: 76px;
+        }
+    }
+
+    #contacts {
+        &::before {
+            margin-top: -76px;
+            padding-top: 76px;
         }
     }
 }
