@@ -241,6 +241,20 @@ let swiper4 = new Swiper('.swiper4', {
     },
 });
 
+let swiper5 = new Swiper(".swiper5", {
+    spaceBetween: 15,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+
+let swiper6 = new Swiper(".swiper6", {
+    spaceBetween: 10,
+    thumbs: {
+        swiper: swiper5,
+    },
+});
+
 // аккордеон (начало)
 
 $(document).ready(function () {

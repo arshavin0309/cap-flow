@@ -17,4 +17,10 @@
             gap: 40px;
         }
     }
+
+    .platform {
+        &__list {
+            display: none;
+        }
+    }
 }
