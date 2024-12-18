@@ -11,6 +11,32 @@
         }
     }
 
+    .faq {
+        &__list {
+            .answer {
+                font-weight: 300;
+            }
+        }
+    }
+
+    .how {
+        h3 {
+            &+p {
+                font-weight: 300;
+            }
+        }
+
+        &__image {
+            margin-top: 15px;
+        }
+
+        &__btn {
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: 300;
+        }
+    }
+
     .trade {
         &__title {
             font-size: clamp(22px, 4vw, 25px);
@@ -226,6 +252,13 @@
         }
     }
 
+    .btn-transparent {
+        padding: 8px 20px;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 300;
+    }
+
     .banner {
         .container {
             grid-template-columns: 1fr;
@@ -244,6 +277,87 @@
                 max-width: 305px;
                 height: 100%;
                 object-fit: contain;
+            }
+        }
+
+        &__btn {
+            height: 40px;
+        }
+    }
+
+    .feedback {
+        &__estimation {
+            font-weight: 300;
+        }
+
+        &__name {
+            font-weight: 300;
+        }
+    }
+
+    .swiper3 {
+        .swiper-slide {
+            p {
+                font-weight: 300;
+            }
+        }
+    }
+
+    .contacts {
+        h2 {
+            &+p {
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+
+        &__tel {
+            font-weight: 300;
+        }
+
+        &__address {
+            font-weight: 300;
+        }
+
+        &__mail {
+            font-weight: 300;
+        }
+    }
+
+    .form {
+        input {
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 22px;
+
+            &::placeholder {
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 22px;
+            }
+
+            &[type=submit] {
+                width: auto;
+                min-width: 210px;
+                height: 45px;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 22px;
+                background: var(--accent) url(../images/play-accent.svg) right 5px center / 35px 35px no-repeat;
+            }
+        }
+
+        textarea {
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 22px;
+            padding-bottom: 40px;
+
+            &::placeholder {
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 22px;
             }
         }
     }
