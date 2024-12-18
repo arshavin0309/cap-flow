@@ -152,4 +152,26 @@
             display: block;
         }
     }
+
+    .banner {
+        .container {
+            grid-template-columns: 1fr;
+            gap: 40px;
+            padding-top: 110px;
+            padding-bottom: 30px;
+        }
+
+        &__picture {
+            display: flex;
+            justify-content: end;
+            margin-right: -15px;
+            margin-bottom: 0;
+
+            img {
+                max-width: 305px;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
 }

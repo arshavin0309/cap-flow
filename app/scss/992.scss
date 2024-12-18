@@ -33,4 +33,10 @@
             height: 200px;
         }
     }
+
+    .banner {
+        .container {
+            grid-template-columns: 450px 450px;
+        }
+    }
 }

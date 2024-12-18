@@ -919,6 +919,10 @@ img {
 
     .swiper6 {
         display: none;
+
+        .swiper-slide {
+            height: auto;
+        }
     }
 
     &__item {
@@ -1472,6 +1476,8 @@ img {
     }
 
     input {
+        z-index: 1;
+        position: relative;
         width: 100%;
         padding: 10px 0;
         background: transparent;

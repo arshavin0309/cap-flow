@@ -107,89 +107,20 @@ document.querySelector('.cookies .btn').addEventListener('click', () => {
 let menuItem = $('.header .menu > .menu-item')
 let subMenu = $('.header .menu > .menu-item .sub-menu')
 
-if ($(window).width() <= 1024) {
+if ($(window).width() <= 1200) {
 
     $('.header__burger').on('click', function () {
-        $('.header__burger').toggleClass('active')
-        $('.header__box').toggleClass('active')
-        $('.header .menu').toggleClass('active')
-
-        subMenu.slideUp()
-        menuItem.removeClass('active')
+        $('.header__burger').toggleClass('active');
+        $('.header__nav').toggleClass('active');
     })
 
     $('.upButton').on('click', function () {
-        $('.header__burger').removeClass('active')
-        $('.header__box').removeClass('active')
-        $('.header .menu').removeClass('active')
-
-        subMenu.slideUp()
-        menuItem.removeClass('active')
+        $('.header__burger').removeClass('active');
+        $('.header__nav').removeClass('active');
     });
-
-    for (let i = 0; i < menuItem.length; i++) {
-        menuItem.eq(i).on('click', function () {
-
-            if (menuItem.eq(i).hasClass('active')) {
-
-                menuItem.eq(i).removeClass('active')
-                subMenu.eq(i).slideUp()
-
-            } else {
-                subMenu.slideUp()
-                menuItem.removeClass('active')
-
-                subMenu.eq(i).slideDown()
-                menuItem.eq(i).addClass('active')
-            }
-        })
-    }
 }
 
 // мобильное меню (конец)
-
-// табы для таблиц (начало)
-let tableBtn = $(".start-instruments__btn");
-let tableTable = $(".start-instruments__table");
-let tableShow = $(".start-instruments__show");
-let tableHide = $(".start-instruments__hide");
-let tableTr = $(".start-instruments__table tr");
-
-tableHide.css('display', 'none');
-
-for (let i = 0; i < tableBtn.length; i++) {
-    tableBtn.eq(i).on("click", () => {
-        for (let n = 0; n < tableBtn.length; n++) {
-            tableBtn.eq(n).removeClass("active");
-            tableTable.eq(n).removeClass("active");
-        };
-
-        tableBtn.eq(i).addClass("active");
-        tableTable.eq(i).addClass("active");
-        hideTr();
-    });
-};
-
-function showTr() {
-    tableTr.addClass('active');
-    tableShow.css('display', 'none');
-    tableHide.css('display', 'flex');
-}
-
-function hideTr() {
-    tableTr.removeClass('active');
-    tableHide.css('display', 'none');
-    tableShow.css('display', 'flex');
-
-    $("body, html").animate({
-        scrollTop: $('.start-instruments').offset().top
-    }, 600);
-}
-
-tableShow.on('click', showTr);
-tableHide.on('click', hideTr);
-
-// табы для таблиц (конец)
 
 let swiper1 = new Swiper(".swiper1", {
     slidesPerView: 3,
