@@ -32,9 +32,11 @@
         .swiper-slide {
             font-size: 16px;
             white-space: pre-wrap;
+            font-weight: 300;
 
             &-thumb-active {
                 border-radius: 26px;
+                font-weight: 600;
             }
         }
     }

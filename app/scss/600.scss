@@ -2,19 +2,40 @@
     .hero {
         .container {
             grid-template-columns: 1fr;
+            gap: 40px;
         }
 
         &__picture {
             max-width: 400px;
             margin: auto;
-            gap: 40px;
         }
     }
 
     .trade {
+        &__title {
+            font-size: clamp(22px, 4vw, 25px);
+        }
+
+        &__info {
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 300;
+        }
+
         &__item {
             grid-template-columns: 2fr 1fr;
             gap: 40px;
+
+            ul {
+                li {
+                    font-weight: 300;
+                    font-size: 16px;
+
+                    span {
+                        font-weight: 600;
+                    }
+                }
+            }
         }
     }
 
@@ -25,6 +46,10 @@
 
         &__item {
             gap: 15px;
+
+            p {
+                font-weight: 300;
+            }
 
             &:nth-child(1) {
                 padding: 40px 20px 290px;
@@ -141,7 +166,47 @@
 
         &__btn {
             width: 100%;
-        }        
+
+            span {
+                font-weight: 300;
+            }
+
+            &--su {
+                span {
+                    &::before {
+                        width: 15px;
+                        height: 17px;
+                    }
+                }
+            }
+
+            &--wt {
+                span {
+                    &::before {
+                        width: 17px;
+                        height: 17px;
+                    }
+                }
+            }
+
+            &--mac {
+                span {
+                    &::before {
+                        width: 17px;
+                        height: 17px;
+                    }
+                }
+            }
+
+            &--win {
+                span {
+                    &::before {
+                        width: 17px;
+                        height: 17px;
+                    }
+                }
+            }
+        }
 
         .swiper5 {
             display: block;
@@ -150,6 +215,14 @@
 
         .swiper6 {
             display: block;
+        }
+    }
+
+    .analytics {
+        h2 {
+            &+p {
+                font-weight: 300;
+            }
         }
     }
 

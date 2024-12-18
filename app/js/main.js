@@ -118,6 +118,16 @@ if ($(window).width() <= 1200) {
         $('.header__burger').removeClass('active');
         $('.header__nav').removeClass('active');
     });
+
+    $('.header .menu-item').on('click', function () {
+        $('.header__burger').removeClass('active');
+        $('.header__nav').removeClass('active');
+    });
+
+    $('.header__logo').on('click', function () {
+        $('.header__burger').removeClass('active');
+        $('.header__nav').removeClass('active');
+    });
 }
 
 // мобильное меню (конец)

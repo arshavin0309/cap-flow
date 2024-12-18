@@ -14,6 +14,12 @@
         }
     }
 
+    .hero {
+        .btn {
+            font-weight: 600;
+        }
+    }
+
     .header {
         .btn-transparent {
             text-align: center;
@@ -38,9 +44,35 @@
             padding-bottom: 70px;
         }
 
+        &__tel {
+            grid-template-columns: 18px 1fr;
+            gap: 10px;
+
+            &::before {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        &__mail {
+            grid-template-columns: 18px 1fr;
+            gap: 10px;
+
+            &::before {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        .menu {
+            justify-content: space-between;
+        }
+
         &__icons {
             grid-template-columns: repeat(2, 40px);
+            grid-template-rows: auto;
             gap: 10px;
+            margin-left: auto;
 
             div {
                 width: 40px;
