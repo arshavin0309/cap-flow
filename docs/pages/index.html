@@ -12,6 +12,7 @@
             </div>
 
             <picture class="hero__picture">
+                <source media="(max-width: 600px)" srcset="images/hero-image-mobile.svg">
                 <img src="images/hero-image.svg" alt="">
             </picture>
         </div>
@@ -84,7 +85,9 @@
                 </div>
             </div>
 
-            <a href="##" class="btn-transparent how__btn">Sign up</a>
+            <div class="how__for-btn">
+                <a href="##" class="btn-transparent how__btn">Sign up</a>
+            </div>
         </div>
     </section>
 
@@ -263,8 +266,12 @@
                     </div>
 
                     <div class="swiper-slide">
-                        <div class="widget-box">
+                        <div class="widget-box desktop">
                             <script src="https://api.marketcheese.com/widgets/calendar/widget.js" data-config='{"filters":{"countries":"1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,81,186,211","segments":"4,14,16"},"language":"en","timezone":"current","upload":"manual","rowCount":5}'></script>
+                        </div>
+
+                        <div class="widget-box mobile">
+                            <script src="https://api.marketcheese.com/widgets/calendar/widget.js" data-config='{"filters":{"countries":"1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,81,186,211","segments":"4,14,16"},"language":"en","timezone":"current","upload":"manual","rowCount":3}'></script>
                         </div>
                     </div>
 
@@ -476,6 +483,9 @@
             </div>
 
             <picture class="banner__picture">
+                <source media="(max-width: 600px)" srcset="images/banner-image-mobile.avif">
+                <source media="(max-width: 600px)" srcset="images/banner-image-mobile.webp">
+                <source media="(max-width: 600px)" srcset="images/banner-image-mobile.png">
                 <source srcset="images/banner-image.avif">
                 <source srcset="images/banner-image.webp">
                 <img src="banner-image.png" alt="">

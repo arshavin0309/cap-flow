@@ -21,6 +21,16 @@
         }
     }
 
+    .widget-box {
+        &.desktop {
+            display: none;
+        }
+
+        &.mobile {
+            display: block;
+        }
+    }
+
     .swiper1 {
         max-width: 360px;
         margin-bottom: 30px;

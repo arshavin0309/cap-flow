@@ -1157,6 +1157,10 @@ img {
     .mch-widget {
         margin: auto;
     }
+
+    &.mobile {
+        display: none;
+    }
 }
 
 .swiper1 {

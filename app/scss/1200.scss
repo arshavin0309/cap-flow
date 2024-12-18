@@ -76,7 +76,17 @@
         margin-bottom: 110px;
     }
 
+    .faq {
+        &::before {
+            background: url(../images/faq-line-mobile.svg) center top 65px / 100% calc(100% - 75px - 65px) no-repeat;
+        }
+    }
+
     .why {
+        &::before {
+            background: url(../images/why-line-mobile.svg) center bottom 120px / 100% calc(100% - 120px) no-repeat;
+        }
+
         &__list {
             .why__item {
                 &:nth-child(1) {
@@ -332,6 +342,12 @@
         &::before {
             margin-top: -76px;
             padding-top: 76px;
+        }
+    }
+
+    .contacts {
+        &::after {
+            background: url(../images/contacts-line.svg) right top 76px / 50% calc(70% - 76px) no-repeat;
         }
     }
 }
