@@ -125,4 +125,30 @@
             padding: 50px 20px;
         }
     }
+
+    .error-hero {
+        &::before {
+            width: 100%;
+            height: calc(100% + 200px);
+            left: 0;
+            right: 0;
+            bottom: -200px;
+            top: auto;
+            background: url(../images/error-line-mobile.svg) right bottom / 100% 100% no-repeat;
+        }
+        .container {
+            padding-top: 75px;
+
+            &::before {
+                width: 175px;
+                height: 90px;
+                top: 100px;
+                left: 130px;
+            }
+        }
+
+        .btn-transparent {
+            min-width: auto;
+        }
+    }
 }

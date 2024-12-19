@@ -107,6 +107,13 @@ document.querySelector('.cookies .btn').addEventListener('click', () => {
 let menuItem = $('.header .menu > .menu-item')
 let subMenu = $('.header .menu > .menu-item .sub-menu')
 
+function openMainPage() { window.open('/', '_self') }
+
+if (document.location.pathname === '/404.html') {
+    $('.header__logo').on('click', openMainPage)
+    $('.footer__logo').on('click', openMainPage)
+};
+
 if ($(window).width() <= 1200) {
 
     $('.header__burger').on('click', function () {

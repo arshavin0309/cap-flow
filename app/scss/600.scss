@@ -295,6 +295,20 @@
         }
     }
 
+    .why {
+        h2 {
+            &+p {
+                font-weight: 300;
+            }
+        }
+
+        h3 {
+            &+p {
+                font-weight: 300;
+            }
+        }
+    }
+
     .swiper3 {
         .swiper-slide {
             p {
@@ -352,12 +366,44 @@
             font-weight: 300;
             font-size: 18px;
             line-height: 22px;
-            padding-bottom: 40px;
+            padding-bottom: 20px;
 
             &::placeholder {
                 font-weight: 300;
                 font-size: 18px;
                 line-height: 22px;
+            }
+        }
+    }
+
+    .header {
+        .menu {
+            &>.menu-item {
+                &>a {
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+
+    .footer {
+        .menu {
+            &>.menu-item {
+                &>a {
+                    font-weight: 300;
+                }
+            }
+        }
+
+        &__docs {
+            a {
+                font-weight: 300;
+            }
+        }
+
+        &__info {
+            p {
+                font-weight: 300;
             }
         }
     }

@@ -76,7 +76,8 @@ h2 {
     color: var(--white);
 }
 
-h3 {
+h3,
+.h3 {
     font-family: 'benzin';
     font-size: clamp(22px, 4vw, 25px);
     line-height: 110%;
@@ -463,7 +464,7 @@ section {
         width: 100%;
         height: 100%;
         background: url(../images/why-line.svg) center bottom 120px / 100% calc(100% - 120px) no-repeat;
-        animation: animationLine 30s ease-in-out infinite;
+        animation: animationLine 20s ease-in-out infinite;
     }
 
     h2 {
@@ -1217,7 +1218,7 @@ img {
         width: 100%;
         height: 100%;
         background: url(../images/faq-line.svg) center top 65px / 100% calc(100% - 75px - 65px) no-repeat;
-        animation: animationLine 30s ease-in-out infinite;
+        animation: animationLine 20s ease-in-out infinite;
     }
 
     h2 {
@@ -1687,6 +1688,71 @@ img {
         margin-top: -135px;
         padding-top: 135px;
         background: var(--grey);
+    }
+}
+
+.error-hero {
+    position: relative;
+    overflow: clip;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 550px;
+        bottom: -50px;
+        right: 0;
+        background: url(../images/error-line.svg) right bottom / 90% 80% no-repeat;
+        animation: animationLine2 20s ease-in-out infinite;
+    }
+
+    .container {
+        position: relative;
+        padding-top: 90px;
+        padding-bottom: 200px;
+        margin-bottom: -120px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            width: 710px;
+            height: 160px;
+            top: 120px;
+            left: 135px;
+            background: var(--accent);
+            border-radius: 50%;
+            filter: blur(50px);
+            opacity: 0.4;
+        }
+    }
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: clamp(40px, 8vw, 100px);
+        line-height: 110%;
+    }
+
+    .h3 {
+        max-width: 670px;
+    }
+
+    .btn-transparent {
+        min-width: 370px;
+        margin-top: 40px;
+        justify-content: space-between;
+        padding: 15px 40px;
+        font-size: 22px;
+        line-height: 125%;
+        gap: 20px;
+
+        &::after {
+            content: '';
+            width: 28px;
+            height: 14px;
+            background: url(../images/arrow.svg) center / contain no-repeat;
+        }
     }
 }
 
