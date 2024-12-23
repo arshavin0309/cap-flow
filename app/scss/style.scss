@@ -1553,7 +1553,8 @@ img {
 
     textarea {
         width: 100%;
-        padding: 10px 0 60px;
+        max-height: 125px;
+        padding: 10px 0;
         background: transparent;
         border: none;
         border-bottom: 1px solid #EFEFEF99;
@@ -1754,6 +1755,17 @@ img {
             background: url(../images/arrow.svg) center / contain no-repeat;
         }
     }
+}
+
+.wpcf7 form .wpcf7-response-output {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    color: #ffb900 !important;
+}
+
+.wpcf7-not-valid-tip {
+    margin: 10px 0 !important;
 }
 
 @import '../scss/hovers';
