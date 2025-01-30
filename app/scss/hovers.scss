@@ -140,5 +140,25 @@
                 transform: scale(1.01);
             }
         }
+
+        &__list {
+            &--new {
+                &>li {
+                    &:hover {
+                        &::before {
+                            opacity: 1;
+                        }
+                    }
+
+                    &.active {
+                        &:hover {
+                            &::before {
+                                opacity: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

@@ -1,5 +1,9 @@
 @media (max-width: 768px) {
     .trade {
+        h2 {
+            text-align: left;
+        }
+
         &__item {
             grid-template-columns: repeat(2, 1fr);
             padding: 50px 20px;
@@ -13,6 +17,98 @@
             min-width: 100%;
             font-size: 18px;
             margin-top: 40px;
+        }
+
+        &__list {
+            &--new {
+                .answer {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    gap: 30px;
+                    margin-top: -67px;
+
+                    .trade__price {
+                        font-size: 18px;
+                        line-height: 125%;
+                        font-weight: 400;
+                    }
+
+                    ul {
+                        li {
+                            font-size: 16px;
+                            line-height: 20px;
+                            font-weight: 300;
+                        }
+                    }
+                }
+
+                .trade__price {
+                    font-size: 16px;
+                    line-height: 110%;
+                    white-space: nowrap;
+                }
+
+                .trade__heading {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                }
+
+                .trade__intro {
+                    gap: 20px;
+                }
+
+                .trade__link {
+                    display: none;
+                    font-size: 18px;
+                    line-height: 125%;
+                    font-weight: 300;
+
+                    &.mobile {
+                        display: flex;
+                        white-space: nowrap;
+                    }
+                }
+
+                &>li {
+                    padding: 30px 20px;
+
+                    &::before {
+                        display: none;
+                    }
+
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        width: 20px;
+                        height: 9px;
+                        right: 20px;
+                        top: 37px;
+                        background: url(../images/arrow-3.svg) center / contain no-repeat;
+                        transition: var(--transition);
+                    }
+
+                    h3 {
+                        gap: 15px;
+
+                        .popular {
+                            padding: 4px 15px;
+                            font-size: 8px;
+                            line-height: 110%;
+                            font-weight: 400;
+                            border-radius: 5px;
+                            transform: translateY(3px);
+                        }
+                    }
+
+                    &.active {
+                        &::after {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -136,6 +232,7 @@
             top: auto;
             background: url(../images/error-line-mobile.svg) right bottom / 100% 100% no-repeat;
         }
+
         .container {
             padding-top: 75px;
 

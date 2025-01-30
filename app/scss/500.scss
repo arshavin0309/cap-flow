@@ -47,6 +47,7 @@
 
     .footer {
         .container {
+            gap: 40px;
             padding-bottom: 70px;
         }
 
@@ -72,6 +73,13 @@
 
         .menu {
             justify-content: space-between;
+        }
+
+        &__partner {
+            img {
+                width: 108px;
+                height: 22px;
+            }
         }
 
         &__icons {
@@ -213,6 +221,16 @@
             display: flex;
             gap: 30px;
             min-height: 480px;
+        }
+
+        &__list {
+            &--new {
+                &>li {
+                    .trade__link {
+                        justify-content: space-between;
+                    }
+                }
+            }
         }
     }
 

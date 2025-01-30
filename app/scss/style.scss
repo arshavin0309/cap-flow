@@ -253,6 +253,19 @@ section {
     margin-top: 120px;
     background: var(--black);
 
+    &__partner {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+        text-decoration: none;
+
+        &>p {
+            color: rgba(239, 239, 239, 0.6);
+            text-align: center;
+        }
+    }
+
     &__tel {
         display: grid;
         grid-template-columns: 20px 1fr;
@@ -390,7 +403,7 @@ section {
     }
 
     &__info {
-        grid-column: 1/5;
+        grid-column: 2/5;
 
         p {
             font-size: 16px;
@@ -752,8 +765,22 @@ img {
 }
 
 .trade {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: 160px;
+        left: 0;
+        width: 100%;
+        height: 300px;
+        background: image-set(url(../images/trade-line.avif), url(../images/trade-line.webp), url(../images/trade-line.png)) center / 100% 100% no-repeat;
+        animation: animationLine 20s ease-in-out infinite;
+    }
+
     h2 {
         margin-bottom: 50px;
+        text-align: center;
     }
 
     &__top {
@@ -770,6 +797,155 @@ img {
         display: grid;
         gap: 10px;
         grid-template-columns: repeat(3, 1fr);
+
+        display: none !important;
+
+        &--new {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            list-style: none;
+
+            .trade__price {
+                font-family: 'benzin';
+                font-size: 18px;
+                line-height: 110%;
+                font-weight: 400;
+                color: var(--white);
+            }
+
+            .trade__link {
+                z-index: 1;
+                position: relative;
+                display: flex;
+                align-items: center;
+                gap: 80px;
+                padding: 5px 20px;
+                font-size: 22px;
+                line-height: 130%;
+                font-weight: 400;
+
+                &.mobile {
+                    display: none;
+                }
+
+                &::after {
+                    display: block;
+                    content: '';
+                    width: 28px;
+                    height: 14px;
+                    background: url(../images/arrow.svg) center / contain no-repeat;
+                }
+            }
+
+            .trade__intro {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            &>li {
+                position: relative;
+                padding: 40px 60px;
+                background: var(--backdrop);
+                border-radius: 20px;
+                cursor: pointer;
+                transition: var(--transition);
+                overflow: clip;
+                backdrop-filter: blur(15px);
+
+                &::before {
+                    position: absolute;
+                    left: 15%;
+                    top: 5%;
+                    content: '';
+                    width: 60%;
+                    height: 90%;
+                    background: #57C7FFCC;
+                    border-radius: 50%;
+                    filter: blur(80px);
+                    opacity: 0;
+                    transition: var(--transition);
+                }
+
+                &.active {
+                    background: #57C7FF33;
+                    border: 1.5px solid var(--accent);
+
+                    .trade__heading {
+                        opacity: 0;
+                    }
+                }
+
+                h3 {
+                    display: flex;
+                    gap: 30px;
+                    align-items: center;
+
+                    .popular {
+                        padding: 9px 27px;
+                        background: var(--accent);
+                        font-family: 'benzin';
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 110%;
+                        color: var(--black);
+                        border-radius: 10px;
+                    }
+                }
+            }
+
+            .trade__heading {
+                position: relative;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                transition: var(--transition);
+            }
+
+            .trade__box {
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+                justify-content: space-between;
+                align-items: start;
+            }
+
+            .answer {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                margin-top: -28px;
+
+                .trade__price {
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 22px;
+                    line-height: 125%;
+                }
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    list-style: none;
+
+                    li {
+                        position: relative;
+                        padding-left: 29px;
+
+                        &::before {
+                            position: absolute;
+                            content: '';
+                            top: 5px;
+                            left: 0;
+                            width: 14px;
+                            height: 14px;
+                            border-radius: 2px;
+                            background: var(--white);
+                        }
+                    }
+                }
+            }
+        }
     }
 
     &__item {

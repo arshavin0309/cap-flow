@@ -20,6 +20,16 @@
         &__info {
             grid-column: 1/3;
         }
+
+        &__partner {
+            grid-column: 1/3;
+            flex-direction: row;
+            align-items: center;
+
+            &>p {
+                text-align: left;
+            }
+        }
     }
 
     .contacts {

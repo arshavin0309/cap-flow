@@ -198,6 +198,11 @@
     }
 
     .trade {
+        &::after {
+            top: 80px;
+            background: image-set(url(../images/trade-line-mobile.avif), url(../images/trade-line-mobile.webp), url(../images/trade-line-mobile.png)) center / 100% 100% no-repeat;
+        }
+
         &__list {
             grid-template-columns: 1fr;
             gap: 20px;

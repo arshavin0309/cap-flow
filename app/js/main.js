@@ -238,6 +238,22 @@ $(document).ready(function () {
 
 });
 
+$(document).ready(function () {
+    $('.trade__list--new > li > .answer').hide();
+
+    $('.trade__list--new > li').click(function () {
+        if ($(this).hasClass("active")) {
+            $(this).removeClass("active").find(".answer").slideUp();
+        } else {
+            $(".trade__list--new > li.active .answer").slideUp();
+            $(".trade__list--new > li.active").removeClass("active");
+            $(this).addClass("active").find(".answer").slideDown();
+        }
+        return false;
+    });
+
+});
+
 // аккордеон (конец)
 
 // плавная прокрутка до якоря (начало)
