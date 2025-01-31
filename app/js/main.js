@@ -242,6 +242,10 @@ $(document).ready(function () {
     $('.trade__list--new > li > .answer').hide();
 
     $('.trade__list--new > li').click(function () {
+        $('.trade__link').click(function () {
+            window.open($(this).attr('href'), '_blank');
+            return false;
+        });
         if ($(this).hasClass("active")) {
             $(this).removeClass("active").find(".answer").slideUp();
         } else {
